@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="TemplateMo" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700"
+      rel="stylesheet"
+    />
+
+    <title>Baja Mobile Service</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="estilos2.css" rel="stylesheet" />
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css" />
+    <link rel="stylesheet" href="assets/css/templatemo-host-cloud.css" />
+    <link rel="stylesheet" href="assets/css/owl.css" />
+    <!--
+
+Host Cloud Template
+
+https://templatemo.com/tm-541-host-cloud
+
+-->
+  </head>
+
+  <body>
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+      <div class="jumper">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+
+    <!-- Header -->
+    <header class="">
+      <nav class="navbar navbar-expand-lg">
+        <!--
+        <label for="" class="brand">
+          <a href=""><img src="../templatemo_541_host_cloud/assets/images/BM-logo.png" alt=""></a>
+        </label>
+        -->
+        <div class="container">
+          <a class="navbar-brand" href="index.html"
+            ><h2>Baja <em>Mobile Service</em></h2></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarResponsive"
+            aria-controls="navbarResponsive"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"
+                  >Inicio
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Nuestro Servicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contactanos</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="dates.html">Agendar Cita</a>
+              </li>
+            </ul>
+          </div>
+          <div class="functional-buttons">
+            <ul>
+              <li><a href="loginvista.html">Login</a></li>
+              <li><a href="registrarvista.html">Sign Up</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Page Content -->
+    <!-- Heading Starts Here -->
+    <div class="page-heading header-text">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1>Agendar Cita</h1>
+            <p><a href="index.html">Inicio</a> / <span>Agendar Cita</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Heading Ends Here -->
+
+    <!-- Services Starts Here -->
+
+    <div class="col-md-12">
+      <div class="right-content">
+        <div class="section-heading">
+          <div class="contenedor">
+            <!--<form id="contact" action="https://formsubmit.co/15da0b2afd3aec17cc2ca906a5300e68" method="POST">-->
+            <form action="enviar_correo.php" method="POST">
+
+            <form
+              action="procesar_formulario.php"
+              method="POST"
+              onsubmit="return validarFormulario()"
+            >
+              <h2>Solicitud de Reparación de Smartphone/Tablet a Domicilio</h2>
+              <div class="contenido">
+                <div class="caja">
+                  <label for="nombre">Nombre:</label>
+                  <input type="text" id="nombre" name="nombre" required />
+                </div>
+
+                <div class="caja">
+                  <label for="apellidos">Apellidos:</label>
+                  <input type="text" id="apellidos" name="apellidos" required />
+                </div>
+
+                <div class="caja">
+                  <label for="telefono">Teléfono de contacto:</label>
+                  <input type="tel" id="telefono" name="telefono" required />
+                </div>
+
+                <div class="caja">
+                  <label for="direccion">Dirección de Domicilio:</label>
+                  <input type="text" id="direccion" name="direccion" required />
+                </div>
+
+                <div class="caja">
+                  <label for="calle">Calle:</label>
+                  <input type="text" id="calle" name="calle" required />
+                </div>
+
+                <div class="caja">
+                  <label for="colonia">Colonia:</label>
+                  <input type="text" id="colonia" name="colonia" required />
+                </div>
+
+                <div class="caja">
+                  <label for="numint">Numero interior:</label>
+                  <input type="text" id="numeroint" name="numeroint" required />
+                </div>
+
+                <div class="caja">
+                  <label for="numext">Numero exterior:</label>
+                  <input type="text" id="numeroext" name="numeroext" required />
+                </div>
+
+                <div class="caja">
+                  <label for="codigopost">Codigo postal:</label>
+                  <input
+                    type="text"
+                    id="codigopost"
+                    name="codigopost"
+                    required
+                  />
+                </div>
+
+                <div class="caja">
+                  <label for="ref">Referencias:</label>
+                  <input type="text" id="ref" name="ref" required />
+                </div>
+
+                <div class="caja">
+                  <label for="fecha">Selecciona Fecha para tu Cita</label>
+                  <input
+                    type="date"
+                    id="fecha"
+                    name="fecha"
+                    placeholder="Fecha de Cita"
+                    required
+                  />
+                </div>
+
+                <div class="caja">
+                  <label for="destinatario">Correo electronico:</label>
+                  <input type="email" id="destinatario" name="destinatario" required />
+                </div>
+
+                <div class="caja">
+                  <label for="marca">Seleccionar marca del dispositivo:</label>
+                  <select id="marca" name="marca" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Samsung">Samsung</option>
+                    <option value="Apple">Apple</option>
+                  </select>
+                </div>
+
+                <div class="caja">
+                  <label for="tipo_dispositivo"
+                    >Seleccionar tipo de dispositivo:</label
+                  >
+                  <select
+                    id="tipo_dispositivo"
+                    name="tipo_dispositivo"
+                    required
+                  >
+                    <option value="">Selecciona una opción</option>
+                    <option value="Smartphone">Smartphone</option>
+                    <option value="Tablet">Tablet</option>
+                  </select>
+                </div>
+
+                <div class="caja">
+                  <label for="dispositivo">Selecciona tu dispositivo:</label>
+                  <select id="dispositivo" name="dispositivo" required>
+                    <option value="">Selecciona una opción</option>
+                  </select>
+                </div>
+
+                <div class="caja">
+                  <label for="falla"
+                    >Selecciona la falla en tu dispositivo</label
+                  >
+                  <select id="falla" name="falla" required>
+                    <option>Selecciona una opcion</option>
+                    <option>Pantalla dañada</option>
+                    <option>No se escucha</option>
+                    <option>No carga</option>
+                    <option>No funcionan los botones</option>
+                    <option>No responde al tacto</option>
+                  </select>
+                </div>
+
+                <div class="parrafo">
+                  <label for="descripcion_problema"
+                    >Descripción del Problema:</label
+                  >
+                  <br />
+                  <textarea
+                    id="descripcion_problema"
+                    name="descripcion_problema"
+                    cols="55"
+                    rows="10"
+                    required
+                    placeholder="Agregar una descripción más detallada del problema/falla con tu dispositivo"
+                  ></textarea>
+                </div>
+
+                <div class="boton">
+                  <button type="submit">Enviar Solicitud</button>
+                </div>
+              </div>
+            </form>
+            <script>
+              document.getElementById('contact').onsubmit = function() {
+                  // Realizar una redirección a enviar_correo.php después de enviar el formulario
+                  window.location.href = 'enviar_correo.php';
+                  return false; // Evitar que el formulario se envíe de forma predeterminada
+              };
+          </script>
+          </div>
+          <script>
+            function validarFormulario() {
+              // Aquí puedes agregar funciones de validación personalizadas con JavaScript si es necesario.
+              // Por ejemplo, verificar que el número de teléfono tenga un formato válido, etc.
+              // Si todo está bien, retorna true, de lo contrario, retorna false.
+              return true;
+            }
+
+            // Datos de dispositivos por marca y tipo
+            const dispositivosPorMarcaTipo = {
+              Samsung: {
+                Smartphone: [
+                  "Galaxy S10",
+                  "Galaxy S11",
+                  "Galaxy S20",
+                  "Galaxy S21",
+                ],
+                Tablet: ["Galaxy Tab A", "Galaxy Tab S6", "Galaxy Tab S7"],
+              },
+              Apple: {
+                Smartphone: ["iPhone 8", "iPhone X", "iPhone 11", "iPhone 12"],
+                Tablet: ["iPad Air", "iPad Pro"],
+              },
+            };
+
+            const marcaSelect = document.getElementById("marca");
+            const tipoDispositivoSelect =
+              document.getElementById("tipo_dispositivo");
+            const dispositivoSelect = document.getElementById("dispositivo");
+
+            marcaSelect.addEventListener("change", actualizarDispositivos);
+            tipoDispositivoSelect.addEventListener(
+              "change",
+              actualizarDispositivos
+            );
+
+            function actualizarDispositivos() {
+              const marcaSeleccionada = marcaSelect.value;
+              const tipoSeleccionado = tipoDispositivoSelect.value;
+              const dispositivos =
+                dispositivosPorMarcaTipo[marcaSeleccionada][tipoSeleccionado];
+
+              // Limpiar opciones actuales
+              dispositivoSelect.innerHTML = "";
+
+              // Agregar nuevas opciones de dispositivos
+              dispositivos.forEach((dispositivo) => {
+                const option = document.createElement("option");
+                option.text = dispositivo;
+                dispositivoSelect.add(option);
+              });
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+    <!-- Services Ends Here -->
+
+    <!-- Footer Starts Here -->
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-item">
+              <div class="footer-heading">
+                <h2>Acerca de nosotros</h2>
+              </div>
+              <p>
+                En BMS, nos dedicamos apasionadamente a brindar servicios de
+                reparación de celulares a domicilio con la máxima comodidad y
+                confiabilidad para nuestros clientes. Sabemos lo importante que
+                es mantener tu dispositivo móvil en perfecto estado de
+                funcionamiento, ya que se ha convertido en una herramienta vital
+                en tu vida diaria.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-item">
+              <div class="footer-heading">
+                <h2>Misión</h2>
+              </div>
+              <!--
+                <ul class="footer-list">
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              -->
+              <p>
+                “Brindar la mejor experiencia de usuario a sus clientes a través
+                de nuestro servicio de reparación de Smartphones y Tablets”.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-item">
+              <div class="footer-heading">
+                <h2>Visión</h2>
+              </div>
+              <!--
+                <ul class="footer-list">
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                  <li><a href="#"></a></li>
+                </ul>
+              -->
+              <p>
+                "Ser la empresa líder en reparación de Smartphones y Tablets a
+                nivel estatal”.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 col-xs-12">
+            <div class="footer-item">
+              <div class="footer-heading">
+                <h2>More Information</h2>
+              </div>
+              <ul class="footer-list">
+                <li>Telefono: <a href="#">664-352-3138</a></li>
+                <li>Email: <a href="#">BajaMobileService@gmail.com</a></li>
+                <li>Suporte: <a href="#">support@bms.com</a></li>
+                <li>Website: <a href="#">www.BMS.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="sub-footer">
+              <p>
+                Copyright &copy; 2023 BMS - Designed by
+                <a rel="nofollow" href="https://templatemo.com">TemplateMo</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer Ends Here -->
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Additional Scripts -->
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/accordions.js"></script>
+
+    <script language="text/Javascript">
+      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
+      function clearField(t) {
+        //declaring the array outside of the
+        if (!cleared[t.id]) {
+          // function makes it static and global
+          cleared[t.id] = 1; // you could use true and false, but that's more typing
+          t.value = ""; // with more chance of typos
+          t.style.color = "#fff";
+        }
+      }
+    </script>
+  </body>
+</html>
